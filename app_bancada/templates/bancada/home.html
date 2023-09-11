@@ -1,0 +1,18 @@
+{% extends 'bancada/base.html' %}
+{% block conteudo %}
+
+    <section class="form">
+      <form action="{% url 'listagem_manutencao' %}" method="post">
+        {% csrf_token %}
+        <div style="text-align: center;" class="conteiner"> 
+          <h1>Entrada Manucenção</h1>
+          EMPRESA <input  name="empresa" class="form-control-sm" type="text" value="">
+          CNPJ/CPF <input name="cnpj" class="form-control-sm" type="number">
+          tell contato <input name="tell" class="form-control-sm" type="number">
+
+          <button class="form-control-sm">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+{% endblock %}
